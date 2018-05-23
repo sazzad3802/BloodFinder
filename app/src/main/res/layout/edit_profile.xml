@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Phone Number Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edittext_dialog_bg">
+
+                <EditText
+                    android:id="@+id/input_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:background="@android:color/transparent"
+                    android:hint="Contact Number"
+                    android:inputType="phone"
+                    android:textColorHint="@color/dialog_color"
+                    android:textColor="@color/dialog_color"
+                    android:padding="5dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Last Donate Type -->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edittext_bg"
+                android:weightSum="4">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3.2"
+                    android:background="@drawable/custom_edittext_dialog_bg">
+
+                    <EditText
+                        android:id="@+id/donateDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@android:color/transparent"
+                        android:hint="Last Donate"
+                        android:inputType="date"
+                        android:padding="5dp"
+                        android:textColorHint="@color/dialog_color"
+                        android:textColor="@color/dialog_color" />
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageView
+                    android:padding="8dp"
+                    android:id="@+id/calender"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="2dp"
+                    android:layout_weight=".8"
+                    android:src="@drawable/ic_calendar" />
+
+            </LinearLayout>
+
+            <!-- Area -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="95dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_edittext_dialog_bg">
+
+                <AutoCompleteTextView
+                    android:id="@+id/input_area"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="start"
+                    android:hint="Address"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:textColorHint="@color/dialog_color"
+                    android:textColor="@color/dialog_color"
+                    android:inputType="textCapWords|textMultiLine"
+                    android:padding="10dp" />
+
+            </android.support.design.widget.TextInputLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
